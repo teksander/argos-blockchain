@@ -225,7 +225,8 @@ if __name__ == '__main__':
 
 		resources  = sc.functions.getPatches().call()
 		myResource = sc.functions.getMyPatch().call()
-		tcp_resources.setData({'getPatches':resources, 'getMyPatch':myResource})
+		myQueuePos = sc.functions.amInQueue().call()
+		tcp_resources.setData({'getPatches':resources, 'getMyPatch':myResource, 'getMyQueuePos':myQueuePos })
 
 		time.sleep(0.5)
 

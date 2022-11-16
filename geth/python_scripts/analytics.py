@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
                         block = w3.eth.getBlock(blockHex)
 
-                        scHandle()
+                        # scHandle()
 
                         logs['block'].log([time.time()-block['timestamp'], 
                                     block['timestamp'], 
