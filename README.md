@@ -3,9 +3,11 @@
 This blockchain module allows for creating an Ethereum network with several nodes using Docker containers.
 
 Its goal is to be interfaced with robot controllers in the ARGoS simulator:
+
 https://github.com/ilpincy/argos3
 
 The interface of the Docker containers with ARGoS is done in Python, using the code in the following repository:
+
 https://github.com/teksander/geth-argos
 
 
@@ -43,12 +45,14 @@ https://github.com/Pold87/blockchain-swarm-robotics
 ## Run
 
 Usually, the network is created when a swarm robotics experiment is launched 
+
 (see file: https://github.com/teksander/geth-argos/blob/latest/MarketForaging/reset-geth)
 
 However, you can also start the Ethereum network without ARGoS, using
 the following command:
 
-```bash local/start_network.sh <number of nodes>```
+```
+bash local/start_network.sh <number of nodes>
+```
 
-That is, `bash local/start_network.sh 5`, would
-create a private Ethereum network with 5 nodes.
+That is, `bash local/start_network.sh 5`, would create a private Ethereum network with 5 nodes.
