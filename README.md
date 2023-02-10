@@ -1,7 +1,8 @@
 # ARGoS-Blockchain interface: Blockchain module
 
-This blockchain module allows for creating an Ethereum network with several
-nodes using Docker containers. Its goal is to be interfaced with robot controllers in ARGoS
+This blockchain module allows for creating an Ethereum network with several nodes using Docker containers.
+
+Its goal is to be interfaced with robot controllers in the ARGoS simulator:
 https://github.com/ilpincy/argos3
 
 The interface of the Docker containers with ARGoS is done in Python, using the code in the following repository:
