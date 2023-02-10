@@ -22,9 +22,9 @@ Docker image for the Ethereum nodes and initialize Docker Swarm as
 follows:
 
 ```
-cd geth/
+cd geth
 docker build -t mygeth .
-docker swarm init
+docker swarm init --advertise-addr 127.0.0.1
 ```
 
 Additionally, you have to set the variable `DOCKERFOLDER` in
@@ -36,6 +36,7 @@ repository is located on your computer, for example:
 ```
 
 This version is currently using Ethereum PoA. To use PoW, an different version is availiable at:
+
 https://github.com/Pold87/blockchain-swarm-robotics
 
 
