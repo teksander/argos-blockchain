@@ -48,27 +48,3 @@ if __name__ == '__main__':
     w3 = init_web3()
     sc = registerSC(w3)
 
-
-
-# def getEnodes():
-#     return [peer['enode'] for peer in w3.geth.admin.peers()]
-
-# def getEnodeById(__id, gethEnodes = None):
-#     if not gethEnodes:
-#         gethEnodes = getEnodes() 
-
-#     for enode in gethEnodes:
-#         if readEnode(enode, output = 'id') == __id:
-#             return enode
-
-# def getIds(__enodes = None):
-#     if __enodes:
-#         return [enode.split('@',2)[1].split(':',2)[0].split('.')[-1] for enode in __enodes]
-#     else:
-#         return [enode.split('@',2)[1].split(':',2)[0].split('.')[-1] for enode in getEnodes()]
-
-# def getIps(__enodes = None):
-#     if __enodes:
-#         return [enode.split('@',2)[1].split(':',2)[0] for enode in __enodes]
-#     else:
-#         return [enode.split('@',2)[1].split(':',2)[0] for enode in getEnodes()]

@@ -1,13 +1,21 @@
-docker service rm ethereum_eth
-sleep 1
-docker stack rm ethereum
-sleep 1
+#!/bin/bash  
 
-if docker ps | grep -q "Up"
-then
-	echo "Stopped containers:"
-	docker stop $(docker ps -a -q) 
-	docker rm $(docker ps -a -q)
-else
-	echo "No containers running"
-fi
+docker service scale $1=0
+
+echo "Stopping containers. Maybe takes 15-20 seconds"
+duration=0
+while docker ps | grep -q "Up" ;
+do
+	let duration++
+	echo -ne " ########## ($duration s) ########## \r"
+	sleep 1
+done
+
+echo "Containers stopped. Removing stack"
+
+docker service rm $1
+
+docker stack rm $2
+
+
+
