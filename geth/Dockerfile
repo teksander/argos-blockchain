@@ -18,11 +18,9 @@ RUN cd /root &&\
 RUN pip3 install --upgrade pip
 RUN pip3 install web3 rpyc
 
-COPY ./scripts /root/
-COPY ./files/password /root/files/password
-COPY ./templates /root/
+COPY ./scripts/start.sh /root/
 RUN chmod a+x /root/start.sh
-RUN chmod a+x /root/start_bootstrap.sh
+
 #ADD app.json /root/eth-net-intelligence-api/app.json
 
 ENTRYPOINT /root/start.sh

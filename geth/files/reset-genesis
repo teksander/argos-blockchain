@@ -63,10 +63,10 @@ echo ${parent_path} >> "${parent_path}/genesis.conf"
 ########## Generate Genesis Block ############
 
 cat "${parent_path}/genesis.conf" | "${parent_path}/puppeth" --network=pipucks >/dev/null 2>&1
-# rm "${parent_path}/genesis.conf"
 
 ########## Upload Genesis File ############
 rm "${parent_path}/genesis_poa.json"
+rm "${parent_path}/pipucks-harmony.json"
 mv "${parent_path}/pipucks.json" "${parent_path}/genesis_poa.json"
 #echo "Uploading Genesis Block..."
 #./scp-all /home/"$USER"/mygethnode/genesis/pipucks.json mygethnode/genesis
