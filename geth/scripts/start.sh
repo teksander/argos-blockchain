@@ -13,15 +13,7 @@ geth $GETH_OPTS&
 echo "Removing previous log files"
 rm -rf root/logs/*
 
-echo "Starting analytics logging"
-python3 /root/python_scripts/analytics.py $SLOT&
-
-echo "Starting buffer for w3 interactions"
-python3 /root/python_scripts/buffer.py&
-
-echo "Starting web3 wrapper hosting"
-python3 /root/python_scripts/wrapper.py&
-
+bash /root/python_scripts/on-start
 
 tail -f /dev/null
 

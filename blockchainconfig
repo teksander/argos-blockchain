@@ -1,5 +1,5 @@
 #!/bin/bash  
 
 MAINFOLDER="$HOME/geth-argos"
-DOCKERBASE="$MAINFOLDER/argos-blockchain"
+DOCKERBASE="$MAINFOLDER/argos-blockchain-sm"
 ARGOSFOLDER="$MAINFOLDER/argos-python"
