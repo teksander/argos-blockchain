@@ -1,6 +1,11 @@
 #!/bin/bash  
 
-docker service scale $1=0
+# Change to this script's folder
+cd $( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
+source ../blockchainconfig
+
+docker service scale ${CONTAINERBASE}=0
 
 echo "Stopping containers. Maybe takes 15-20 seconds"
 duration=0
@@ -13,9 +18,9 @@ done
 
 echo "Containers stopped. Removing stack"
 
-docker service rm $1
+docker service rm ${CONTAINERBASE}
 
-docker stack rm $2
+docker stack rm ${SWARMNAME}
 
 
 

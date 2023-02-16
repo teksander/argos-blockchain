@@ -3,3 +3,6 @@
 MAINFOLDER="$HOME/geth-argos"
 DOCKERBASE="$MAINFOLDER/argos-blockchain-sm"
 ARGOSFOLDER="$MAINFOLDER/argos-python"
+
+SWARMNAME=ethereum
+CONTAINERBASE=${SWARMNAME}_eth

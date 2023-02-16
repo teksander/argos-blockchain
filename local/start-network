@@ -5,13 +5,13 @@ cd $( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 source ../blockchainconfig
 
-docker stack rm ethereum >/dev/null 2>&1
+# docker stack rm ${SWARMNAME} >/dev/null 2>&1
 
 rm -f ${DOCKERBASE}/geth/my_enode.enode
 
-docker stack deploy -c ${DOCKERBASE}/local/docker-compose.yml ethereum
+docker stack deploy -c ${DOCKERBASE}/local/docker-compose.yml ${SWARMNAME}
 
-docker service scale ethereum_eth=$1
+docker service scale ${CONTAINERBASE}=$1
 
 docker ps -q
 
