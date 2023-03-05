@@ -2,5 +2,6 @@
 *
 # Except non-experiment dependent
 !.gitignore
-!console
-!wrapper
+!keystores/
+!puppeth
+!reset-genesis

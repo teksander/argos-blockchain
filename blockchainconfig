@@ -1,6 +1,6 @@
-#!/bin/bash  
-
-MAINFOLDER="$HOME/geth-argos"
+# [PATHS]
+HOMEFOLDER=$HOME
+MAINFOLDER="$HOMEFOLDER/geth-argos"
 DOCKERBASE="$MAINFOLDER/argos-blockchain-sm"
 ARGOSFOLDER="$MAINFOLDER/argos-python"
 

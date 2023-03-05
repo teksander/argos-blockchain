@@ -13,7 +13,9 @@ geth $GETH_OPTS&
 echo "Removing previous log files"
 rm -rf root/logs/*
 
-bash /root/python_scripts/on-start
+if [ -f /root/python_scripts/on-start ]; then
+	bash /root/python_scripts/on-start
+fi
 
 tail -f /dev/null
 
