@@ -30,7 +30,7 @@ docker swarm init --advertise-addr 127.0.0.1
 ```
 
 Additionally, you have to set the variable `DOCKERFOLDER` in
-the file `blockchainconfig` to the full path where this
+the file `blockchainconfig.sh` to the full path where this
 repository is located on your computer, for example:
 
 ```

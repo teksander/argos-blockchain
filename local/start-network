@@ -3,7 +3,7 @@
 # Change to this script's folder
 cd $( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
-source ../blockchainconfig
+source ../blockchainconfig.sh
 
 # docker stack rm ${SWARMNAME} >/dev/null 2>&1
 
