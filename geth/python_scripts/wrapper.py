@@ -87,7 +87,7 @@ class Web3_Wrapper_Service(rpyc.Service):
                     \n\tdef exposed_call(self):\
                     \n\t\treturn sc.functions.%s(*self.args).call()\
                     \n\tdef exposed_transact(self, *args):\
-                    \n\t\treturn sc.functions.%s(*self.args).transact(*args)' % (fun,fun,fun))
+                    \n\t\treturn (sc.functions.%s(*self.args).transact(*args)).hex()' % (fun,fun,fun))
 
     class exposed_bf:
         def exposed_get_new_entries():
