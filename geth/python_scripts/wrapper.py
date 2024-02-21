@@ -75,6 +75,10 @@ class Web3_Wrapper_Service(rpyc.Service):
 
     class exposed_sc:
 
+        def exposed_decode_function_input(input_data):
+            func, ins = sc.decode_function_input(input_data)
+            return func, toDict(ins)
+
         class exposed_functions:
 
             funs = [x for x in dir(sc.functions) if not x.startswith('_')]
